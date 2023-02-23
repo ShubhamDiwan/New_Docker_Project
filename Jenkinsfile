@@ -6,6 +6,10 @@ pipeline {
                         git 'https://github.com/ShubhamDiwan/New_Docker_Project.git'
                     }
                 }
+        stage(' Java Version') {
+                    steps {
+                        sh 'java --version'
+                    }
         stage('Build Application') {
             steps {
                 sh 'mvn -f pom.xml clean package'
