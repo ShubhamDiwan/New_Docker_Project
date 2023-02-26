@@ -13,18 +13,8 @@ pipeline {
                 }
         stage('Build Application') {
             steps {
+			    sh 'cd spring-petclinic-config-server' 
                 sh 'mvn spring-boot:run'
-            }
-            post {
-                success {
-                    echo "Now Archiving the Artifacts...."
-                    archiveArtifacts artifacts: '**/*.war'
-                }
-            }
-        }
-        stage('Build and create docker image'){
-            steps{
-                sh "docker build . -t newdockerimage:${env.BUILD_ID}"
             }
         }
     }
