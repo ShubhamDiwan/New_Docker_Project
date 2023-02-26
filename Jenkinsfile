@@ -10,6 +10,7 @@ pipeline {
                     steps {
                         sh 'java --version'
                     }
+                }
         stage('Build Application') {
             steps {
                 sh 'mvn spring-boot:run'
