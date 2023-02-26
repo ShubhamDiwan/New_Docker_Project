@@ -13,7 +13,7 @@ pipeline {
                 }
         stage('Build Application') {
             steps {
-			    sh 'cd spring-petclinic-config-ser' 
+			    sh 'cd spring-petclinic-config-server' 
                 sh 'mvn spring-boot:run'
             }
         }
