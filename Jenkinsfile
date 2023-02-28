@@ -13,7 +13,7 @@ pipeline {
                 }
         stage('Build Application') {
             steps { 
-                sh 'mvn -X spring-boot-maven-plugin:run'
+                sh './mvn clean install -P buildDocker'
             }
         }
     }
