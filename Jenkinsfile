@@ -13,7 +13,7 @@ pipeline {
                 }
         stage('Build Application') {
             steps { 
-                sh 'mvn -X spring-boot-maven-plugin:3.6.3:run'
+                sh 'mvn -X spring-boot-maven-plugin:run'
             }
         }
     }
