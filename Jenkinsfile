@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    
+    tools{
+        java JAVA_HOME
+    }    
     stages {
         stage('Checkout code from git'){
                     steps{
