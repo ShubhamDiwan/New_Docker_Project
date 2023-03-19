@@ -1,6 +1,10 @@
 pipeline {
     agent any
-      
+    
+    environment{
+     BRANCH='main'   
+    }
+    
     stages {
         stage('Checkout code from git'){
                     steps{
